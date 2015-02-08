@@ -22,7 +22,7 @@
                     <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-Up-7JH">
-                    <rect key="frame" x="0.0" y="65" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="Nue-gb-2PY"/>

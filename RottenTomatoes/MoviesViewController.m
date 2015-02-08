@@ -38,7 +38,7 @@
 
   [self.tableView registerNib:[UINib nibWithNibName:@"MovieCell" bundle:nil] forCellReuseIdentifier:@"MovieCell"];
 
-  self.tableView.rowHeight = 120;
+  self.tableView.rowHeight = 140;
 
 
   CGRect labelFrame = CGRectMake(0.0f, 65.0f, 375.0f, 25.0f);
@@ -118,6 +118,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   MovieCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
+  cell.imageView.image = nil;
 
   NSDictionary *movie = self.movies[indexPath.row];
 
