@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MoviesViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+  MoviesViewController *movieVc = [[MoviesViewController alloc] init];
+  movieVc.mediaType = MOVIE;
+  UINavigationController *movieNvc = [[UINavigationController alloc] initWithRootViewController:movieVc];
+  movieNvc.tabBarItem.title = @"Movies";
+  movieNvc.tabBarItem.image = [UIImage imageNamed:@"movie_16.png"];
+
+  MoviesViewController *dvdVc = [[MoviesViewController alloc] init];
+  dvdVc.mediaType = DVD;
+  UINavigationController *dvdNvc = [[UINavigationController alloc] initWithRootViewController:dvdVc];
+  dvdNvc.tabBarItem.title = @"DVDs";
+  dvdNvc.tabBarItem.image = [UIImage imageNamed:@"dvd_16.png"];
+
+  // Configure the tab bar controller with the two navigation controllers
+  UITabBarController *tbc = [[UITabBarController alloc] init];
+  tbc.viewControllers = @[movieNvc, dvdNvc];
+
+  self.window.rootViewController = tbc;
+
+  //self.window.rootViewController = nvc;
+
+  [self.window makeKeyAndVisible];
+
   return YES;
 }
 
