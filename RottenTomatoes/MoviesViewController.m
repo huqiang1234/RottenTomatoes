@@ -58,7 +58,7 @@
   NSURL *movieUrl = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=h5bpwkw327pp353p9wf5eh5w"];
   NSURL *dvdUrl = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=h5bpwkw327pp353p9wf5eh5w"];
   NSURL *url = movieUrl;
-  self.title = @"Movies";
+  self.title = @"Box Office";
   [self.view sendSubviewToBack:self.gridView];
   if (self.mediaType == DVD) {
     url = dvdUrl;

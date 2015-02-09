@@ -23,7 +23,7 @@
   MoviesViewController *movieVc = [[MoviesViewController alloc] init];
   movieVc.mediaType = MOVIE;
   UINavigationController *movieNvc = [[UINavigationController alloc] initWithRootViewController:movieVc];
-  movieNvc.tabBarItem.title = @"Movies";
+  movieNvc.tabBarItem.title = @"Box Office";
   movieNvc.tabBarItem.image = [UIImage imageNamed:@"movie_16.png"];
 
   MoviesViewController *dvdVc = [[MoviesViewController alloc] init];
