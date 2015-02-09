@@ -38,7 +38,7 @@
 
   [self.tableView registerNib:[UINib nibWithNibName:@"MovieCell" bundle:nil] forCellReuseIdentifier:@"MovieCell"];
 
-  self.tableView.rowHeight = 140;
+  self.tableView.rowHeight = 99;
 
 
   CGRect labelFrame = CGRectMake(0.0f, 65.0f, 375.0f, 25.0f);
